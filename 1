@@ -1,0 +1,14 @@
+a=float(input())
+b=float(input())
+c=float(input())
+d=b**2 - 4*a*c
+
+if d>0:
+    f = d**0.5
+    f2 = -d**0.5
+    print((-b+f)//2*a)
+    print((-b+f2)//2*a)
+elif d == 0:
+    print(-b//(2*a))
+else:
+    print("Корней нет")
