@@ -1,0 +1,18 @@
+n = int(input())
+mass = [0]*n
+for i in range(0, n):
+    mass[i] = int(input())
+mass.sort()
+k = 3
+a = mass[n-1]
+b = mass[n-2]
+c = mass[n-k]
+while (a > (b+c))or(b > (a+c))or(c > (a+b))and(k != n):
+    k += 1
+    c = mass[n-k]
+if k!=n:
+    P = a + b + c
+    answer = ((P / 2) * (P / 2 - a) * (P / 2 - b) * (P / 2 - c)) ** 0.5
+    print(answer)
+else:
+    print("нет ответа")
